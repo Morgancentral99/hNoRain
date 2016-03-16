@@ -22,6 +22,7 @@ public class Main extends JavaPlugin implements Listener {
           saveDefaultConfig();
         }
         reloadConfiguration();
+        getCommand("Rain").setExecutor(rainCommandExecutor);
 		getServer().getConsoleSender().sendMessage("No Rain V0.0.1 Loaded");
         getServer().getPluginManager().registerEvents(this, this);
         SpigotPluginUpdater spu = new SpigotPluginUpdater(this/*Your Plugin*/, "http://http://localhost/VersionChecker/hNoRain.html");
